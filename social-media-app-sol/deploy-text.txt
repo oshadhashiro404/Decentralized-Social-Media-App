@@ -1,0 +1,7 @@
+Deploying workspace: https://api.devnet.solana.com
+Upgrade authority: C:\Users\shiro/.config/solana/id.json
+Deploying program "social-media-app-sol"...
+Program path: D:\Dev\YCS\social-media-app\social-media-app-sol\target/deploy/social_media_app_sol.so...
+Program Id: F38pkKewpUfjKSd9GDmTGBXEDE46nNFY69SNcWVouDRC
+
+Deploy success
