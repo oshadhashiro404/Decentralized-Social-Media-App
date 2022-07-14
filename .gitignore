@@ -36,3 +36,9 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# Local Netlify folder
+.netlify
+
+
+/social-media-app-sol
