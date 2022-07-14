@@ -6,16 +6,12 @@ use std::mem::size_of;
 // Declare program ID
 declare_id!("GNSDgX32cCeuuN96GRiBmFE4BAXqgFpftqxSCzDrdkTd");
 
-// Post and comment text length
 const TEXT_LENGTH: usize = 1024;
-// Username length
 const USER_NAME_LENGTH: usize = 100;
-// User profile imaage url length
 const USER_URL_LENGTH: usize = 255;
 
-/// Facebook Clone program
 #[program]
-pub mod facebook_clone {
+pub mod decentra {
     use super::*;
 
     /// Create state to save the post counts
@@ -24,11 +20,11 @@ pub mod facebook_clone {
     pub fn create_state(
         ctx: Context<CreateState>,
     ) -> ProgramResult {
-        // Get state from context
+        
         let state = &mut ctx.accounts.state;
-        // Save authority to state
+
         state.authority = ctx.accounts.authority.key();
-        // Set post count as 0 when initializing
+
         state.post_count = 0;
         Ok(())
     }
@@ -43,27 +39,17 @@ pub mod facebook_clone {
         poster_name: String,
         poster_url: String,
     ) -> ProgramResult {
-        // Get State
+
         let state = &mut ctx.accounts.state;
 
-        // Get post
         let post = &mut ctx.accounts.post;
-        // Set authority
         post.authority = ctx.accounts.authority.key();
-        // Set text
         post.text = text;
-        // Set poster name
         post.poster_name = poster_name;
-        // Set poster avatar url
         post.poster_url = poster_url;
-        // Set comment count as 0
         post.comment_count = 0;
-        // Set post index as state's post count
         post.index = state.post_count;
-        // Set post time
         post.post_time = ctx.accounts.clock.unix_timestamp;
-
-        // Increase state's post count by 1
         state.post_count += 1;
         Ok(())
     }
@@ -79,25 +65,16 @@ pub mod facebook_clone {
         commenter_url: String,
     ) -> ProgramResult {
 
-        // Get post
         let post = &mut ctx.accounts.post;
 
-        // Get comment
         let comment = &mut ctx.accounts.comment;
-        // Set authority to comment
         comment.authority = ctx.accounts.authority.key();
-        // Set comment text
         comment.text = text;
-        // Set commenter name
         comment.commenter_name = commenter_name;
-        // Set commenter url
         comment.commenter_url = commenter_url;
-        // Set comment index to post's comment count
         comment.index = post.comment_count;
-        // Set post time
         comment.post_time = ctx.accounts.clock.unix_timestamp;
 
-        // Increase post's comment count by 1
         post.comment_count += 1;
 
         Ok(())

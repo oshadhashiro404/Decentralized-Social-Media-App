@@ -31,6 +31,7 @@ const CreateComment = ({ createCommentForPost, name, url }) => {
 				<Image
 					className={style.profileImage}
 					src={url}
+					// src="https://avatars.dicebear.com/api/pixel-art-neutral/73.svg"
 					height={44}
 					width={44}
 					alt="profile image"

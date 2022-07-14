@@ -13,7 +13,7 @@ const Header = ({ name, url }) => {
 	const [balance] = useWalletBalance();
 
 	const style = {
-		wrapper: `flex items-center w-full h-[4rem] justify-around px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20`,
+		wrapper: `flex items-center w-full h-[4rem] justify-around px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20 radius-[15px]`,
 		headerLeft: `flex justify-center gap-[0.6rem]`,
 		facebookLogo: `items-center flex object-contain`,
 		searchContainer: `flex items-center bg-[#3a3b3d] max-w-[18rem] rounded-full py-2 px-2 text-[#b0b3b8]`,
@@ -54,7 +54,7 @@ const Header = ({ name, url }) => {
 					<input
 						type="text"
 						className={style.searchInput}
-						placeholder="Search Facebook"
+						placeholder="Search Decentra"
 					/>
 				</div>
 			</div>

@@ -1,5 +1,5 @@
 
-import { FacebookClone } from "../target/types/facebook_clone";
+import { FacebookClone } from "../target/types/decentra";
 
 const anchor = require('@project-serum/anchor');
 const { TOKEN_PROGRAM_ID } = require("@solana/spl-token");

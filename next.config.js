@@ -15,6 +15,7 @@ module.exports = {
 			'scontent-lax3-1.xx.fbcdn.net',
 			'storage.googleapis.com',
 			'cdn.discordapp.com',
+			'nalandacollege.lk',
 		],
 	},
 };
