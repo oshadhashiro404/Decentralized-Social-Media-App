@@ -1,5 +1,5 @@
 
-import { FacebookClone } from "../target/types/decentra";
+import { Decentra } from "../target/types/decentra";
 
 const anchor = require('@project-serum/anchor');
 const { TOKEN_PROGRAM_ID } = require("@solana/spl-token");
@@ -18,7 +18,7 @@ const defaultAccounts = {
 
 // Configure the client to use the local cluster.
 anchor.setProvider(provider);
-const program = anchor.workspace.FacebookClone as Program<FacebookClone>;
+const program = anchor.workspace.Decentra as Program<Decentra>;
 let creatorKey = provider.wallet.publicKey;
 let stateSigner;
 
