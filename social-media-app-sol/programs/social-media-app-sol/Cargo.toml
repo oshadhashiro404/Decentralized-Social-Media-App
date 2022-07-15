@@ -1,5 +1,5 @@
 [package]
-name = "social media app sol"
+name = "social-media-app-sol"
 version = "0.1.0"
 description = "Created with Anchor"
 edition = "2018"
