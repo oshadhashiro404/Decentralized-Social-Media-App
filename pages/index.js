@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
-import SignUp from '../components/SignUp.js';
-import Header from '../components/Header.js';
-import Feed from '../components/Feed.js';
-import RightSidebar from '../components/RightSidebar.js';
-import Sidebar from '../components/Sidebar.js';
+import SignUp from '../Components/SignUp.js';
+import Header from '../Components/Header.js';
+import Feed from '../Components/Feed.js';
+import RightSidebar from '../Components/RightSidebar.js';
+import Sidebar from '../Components/Sidebar.js';
 
 const style = {
 	wrapper: `bg-[#18191a] min-h-screen duration-[0.5s]`,
