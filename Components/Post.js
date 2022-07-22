@@ -58,8 +58,8 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 		<div className={style.wrapper}>
 			<div className={style.postPublisher}>
 				<Image
-					// src={post.posterUrl}
-					src="https://avatars.dicebear.com/api/pixel-art-neutral/73.svg"
+					src={post.posterUrl}
+					// src="https://avatars.dicebear.com/api/pixel-art-neutral/73.svg"
 					className={style.avatar}
 					height={44}
 					width={44}
