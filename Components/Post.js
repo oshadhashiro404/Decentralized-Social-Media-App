@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { BiLike } from 'react-icons/bi';
+import { BiHeart } from 'react-icons/bi';
 import { FaRegCommentAlt } from 'react-icons/fa';
 import { FiRefreshCw } from 'react-icons/fi';
 import CommentSection from './CommentSection';
@@ -58,8 +58,8 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 		<div className={style.wrapper}>
 			<div className={style.postPublisher}>
 				<Image
-					// src={post.posterUrl}
-					src="https://avatars.dicebear.com/api/pixel-art-neutral/73.svg"
+					src={post.posterUrl}
+					// src="https://avatars.dicebear.com/api/pixel-art-neutral/73.svg"
 					className={style.avatar}
 					height={44}
 					width={44}
@@ -79,8 +79,8 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 
 			<div className={style.reactionsContainer}>
 				<div className={style.reactionItem}>
-					<BiLike />
-					<div className={style.reactionsText}>Like</div>
+					<BiHeart />
+					<div className={style.reactionsText}>Love</div>
 				</div>
 				<div
 					className={style.reactionItem}

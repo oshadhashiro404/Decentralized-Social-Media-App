@@ -16,10 +16,11 @@ const Header = ({ name, url }) => {
 		wrapper: `flex items-center w-full h-[4rem] justify-around px-[1rem] py-[0.2rem] sticky top-0 bg-[#252526] shadow-[0px 5px 8px -9px rgba(0, 0, 0, 0.75)] z-20 radius-[15px]`,
 		headerLeft: `flex justify-center gap-[0.6rem]`,
 		facebookLogo: `items-center flex object-contain`,
-		searchContainer: `flex items-center bg-[#3a3b3d] max-w-[18rem] rounded-full py-2 px-2 text-[#b0b3b8]`,
+		searchContainer: `flex items-center bg-[#3a3b3d] max-w-[18rem] rounded-[10px] py-2 px-2 text-[#b0b3b8]`,
 		searchInput: `border-none px-[0.6rem] bg-transparent outline-none w-[18rem] text-white placeholder:text-[#b0b3b8]`,
 		headerCenterContainer: `flex-1 flex items-center justify-center h-full`,
 		headerCenterWrapper: `flex justify-center h-full py-2`,
+		headerText: `text-[28px] text-[#fff] font-bold`,
 		centerNavIconContainer: `flex items-center px-[1.8rem] cursor-pointer duration-[0.5s]  hover:bg-[#555657] rounded-[10px]`,
 		centerNavIcon: `text-2xl text-[#666]`,
 		headerRight: `flex h-min`,
@@ -60,7 +61,7 @@ const Header = ({ name, url }) => {
 			</div>
 			<div className={style.headerCenterContainer}>
 				<div className={style.headerCenterWrapper}>
-					<div className={style.centerNavIconContainer}>
+					{/* <div className={style.centerNavIconContainer}>
 						<AiFillHome className={style.centerNavIcon} />
 					</div>
 					<div className={style.centerNavIconContainer}>
@@ -71,7 +72,9 @@ const Header = ({ name, url }) => {
 					</div>
 					<div className={style.centerNavIconContainer}>
 						<SiFacebookgaming className={style.centerNavIcon} />
-					</div>
+					</div> */}
+
+					<h1 className={style.headerText}>Decentra</h1>
 				</div>
 			</div>
 			<div className={style.headerRight}>
@@ -80,6 +83,9 @@ const Header = ({ name, url }) => {
 						{url && isValidURL(url) ? (
 							<Image
 								src={url}
+								// src={
+								// 	'https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Facebook_f_logo_%282019%29.svg/1200px-Facebook_f_logo_%282019%29.svg.png'
+								// }
 								height={20}
 								width={20}
 								className={style.userImage}
