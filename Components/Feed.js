@@ -193,10 +193,10 @@ const Feed = ({ connected, name, url }) => {
 						{posts.map((post) => {
 							return (
 								<Post
-									post={posts[0].account}
+									post={post.account}
 									viewDetail={getCommentsOnPost}
 									createComment={saveComment}
-									key={posts[0].account.index}
+									key={post.account.index}
 									name={name}
 									url={url}
 								/>
