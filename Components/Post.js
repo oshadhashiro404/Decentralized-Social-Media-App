@@ -37,6 +37,7 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 
 	useEffect(() => {
 		if (comments.length > 0) {
+			console.log(comments);
 			setIsCommentSectionOpened(true);
 		}
 	}, [comments]);
