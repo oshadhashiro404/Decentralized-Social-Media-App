@@ -23,7 +23,7 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 		reactionsContainer: `border-t border-[#3a3b3e] text-[18px] flex justify-evenly text-[#b0b3b8] cursor-pointer py-1`,
 		reactionItem: `flex flex-1 items-center justify-center rounded-[0.4rem] hover:bg-[#404041] py-2`,
 		reactionsText: `ml-[1rem]`,
-		refreshIcon: `text-blue-500`,
+		refreshIcon: `text-green-500`,
 	};
 
 	const [isCommentSectionOpened, setIsCommentSectionOpened] = useState(false);
@@ -31,13 +31,11 @@ const Post = ({ post, viewDetail, createComment, name, url }) => {
 
 	useEffect(() => {
 		postDetail();
-	}, [postDetail]);
-
-	console.log(comments);
+	}, []);
 
 	useEffect(() => {
+		// FIX: comments array is empty
 		if (comments.length > 0) {
-			console.log(comments);
 			setIsCommentSectionOpened(true);
 		}
 	}, [comments]);
